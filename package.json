@@ -16,6 +16,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "concurrently -k \"npm --prefix candyblossomnextjs run dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev:clean": "npm --prefix candyblossomnextjs run clean && npm run dev",
     "build": "npm --prefix candyblossomnextjs run build",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
