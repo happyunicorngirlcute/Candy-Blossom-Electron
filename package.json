@@ -15,9 +15,14 @@
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
+    "dev": "concurrently -k \"npm --prefix candyblossomnextjs run dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "npm --prefix candyblossomnextjs run build",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "electron": "^42.3.3"
+    "concurrently": "^10.0.3",
+    "electron": "^42.3.3",
+    "wait-on": "^9.0.10"
   }
 }

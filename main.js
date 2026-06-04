@@ -8,7 +8,6 @@ const createWindow = () => {
     width: 900,
     height: 700,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.cjs'),
       contextIsolation: true,
       nodeIntegration: false,
     },
@@ -18,7 +17,9 @@ const createWindow = () => {
     win.loadURL('http://localhost:3000')
     win.webContents.openDevTools()
   } else {
-    win.loadFile(path.join(__dirname, 'out', 'index.html'))
+    win.loadFile(
+      path.join(__dirname, 'candyblossomnextjs', 'out', 'index.html')
+    )
   }
 }
 
