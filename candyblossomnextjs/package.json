@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "generate-routes": "node scripts/generate-routes.mjs",
+    "dev": "npm run generate-routes && next dev",
+    "prebuild": "npm run generate-routes",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
